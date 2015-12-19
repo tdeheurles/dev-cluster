@@ -11,7 +11,7 @@ build=$1
 # fail fast
 set -euo pipefail
 
-. ./config
+. ../../config
 
 mkdir -p ./containerBuild/
 
@@ -19,4 +19,4 @@ cp tmpl.Dockerfile              ./containerBuild/Dockerfile
 cp tmpl.install.sh              ./containerBuild/install.sh
 cp tmpl.start.sh                ./containerBuild/start.sh
 
-docker build --no-cache -t tdeheurles/kubernetes:$major.$minor.$build ./containerBuild/.
+docker build --no-cache -t $kubernetesContainer:$kubernetesMajor.$kubernetesMinor.$build ./containerBuild/.

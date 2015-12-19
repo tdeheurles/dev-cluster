@@ -8,9 +8,7 @@ if [[ $1 == "" ]];then
 fi
 build=$1
 
-# fail fast
 set -euo pipefail
-
 . ../../config
 
-docker push $kubernetesContainer:$kubernetesMajor.$kubernetesMinor.$build
+docker run $kubernetesContainer:$kubernetesMajor.$kubernetesMinor.$build
