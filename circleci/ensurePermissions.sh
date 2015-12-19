@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+cd ..
 chmod 755 circleci/buildContainers.sh
 chmod 755 circleci/pushContainers.sh
 chmod 755 src/build/kubernetes/push.sh
