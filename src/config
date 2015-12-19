@@ -1,0 +1,3 @@
+kubernetesMajor=0
+kubernetesMinor=0
+kubernetesContainer="tdeheurles/kubernetes"
