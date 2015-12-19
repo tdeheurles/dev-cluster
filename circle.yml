@@ -6,11 +6,12 @@ dependencies:
   override:
     - docker info
     - cd circleci && chmod 755 ensurePermissions.sh && ./ensurePermissions.sh
+    - cd circleci && ./buildContainers.sh
+    - cd circleci && ./runContainers.sh
 
 test:
   override:
-    - cd circleci && ./buildContainers.sh
-    - cd circleci && ./runContainers.sh
+    - docker ps
 
 deployment:
   hub:
