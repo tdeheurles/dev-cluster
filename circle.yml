@@ -8,10 +8,10 @@ dependencies:
 
 test:
   override:
-    - cd circleci && ./buildContainers
+    - cd circleci && ./buildContainers.sh
 
 deployment:
   hub:
     branch: [master]
     commands:
-      - cd circleCi && ./pushContainers
+      - cd circleCi && ./pushContainers.sh
